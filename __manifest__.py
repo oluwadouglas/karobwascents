@@ -16,8 +16,8 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            'karobwa_website/static/src/css/user_theme_color_palette.css',
-            'karobwa_website/static/src/css/style.css',
+            'karobwascents/static/src/css/user_theme_color_palette.css',
+            'karobwascents/static/src/css/style.css',
         ],
     },
     'installable': True,
