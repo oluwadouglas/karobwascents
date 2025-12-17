@@ -16,6 +16,7 @@
     ],
     'assets': {
         'web.assets_frontend': [
+            'karobwa_website/static/src/css/user_theme_color_palette.css',
             'karobwa_website/static/src/css/style.css',
         ],
     },

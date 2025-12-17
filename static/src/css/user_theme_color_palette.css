@@ -1,0 +1,22 @@
+/* Karobwa Scents - User Theme Color Palette */
+/* This file defines custom color variables for the Odoo theme system */
+
+:root {
+    /* Primary Colors */
+    --o-brand-primary: #000000;
+    --o-brand-secondary: #333333;
+
+    /* Neutral Colors */
+    --o-color-1: #ffffff;
+    --o-color-2: #f8f8f8;
+    --o-color-3: #cccccc;
+    --o-color-4: #666666;
+    --o-color-5: #333333;
+
+    /* Accent Colors */
+    --o-color-accent: #ffc107;
+    --o-color-success: #28a745;
+    --o-color-info: #17a2b8;
+    --o-color-warning: #ffc107;
+    --o-color-danger: #dc3545;
+}

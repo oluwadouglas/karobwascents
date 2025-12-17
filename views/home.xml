@@ -125,7 +125,7 @@
                         <div class="marquee-content">
                             <h3 class="marquee-text">Karobwa Scents</h3>
                             <h3 class="marquee-text outline">Luxury Fragrance</h3>
-                            <h3 class="marquee-text">Premium Perfumes</h3>
+                            <h3 class="marquee-text">Premium Scents</h3>
                             <h3 class="marquee-text outline">Essential Oils</h3>
                             <h3 class="marquee-text">Body Mist</h3>
                             <h3 class="marquee-text outline">Scented Candles</h3>
@@ -144,6 +144,51 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Categories Section -->
+                <section class="categories-section">
+                    <div class="container">
+                        <h2 class="section-title">Shop by Category</h2>
+                        <div class="categories-grid">
+                            <div class="category-card">
+                                <div class="category-image">
+                                    <img src="/karobwa_website/static/src/img/karobwa3.jpg" alt="Gifts"/>
+                                    <div class="category-overlay">
+                                        <div class="category-content">
+                                            <h3 class="category-title">Gifts</h3>
+                                            <p class="category-description">Perfect presents for every occasion</p>
+                                            <a href="/shop" class="category-btn">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-image">
+                                    <img src="/karobwa_website/static/src/img/karobwa4.jpg" alt="Candles"/>
+                                    <div class="category-overlay">
+                                        <div class="category-content">
+                                            <h3 class="category-title">Candles</h3>
+                                            <p class="category-description">Scented candles for ambiance and relaxation</p>
+                                            <a href="/shop" class="category-btn">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-image">
+                                    <img src="/karobwa_website/static/src/img/karobwa5.jpg" alt="Scents"/>
+                                    <div class="category-overlay">
+                                        <div class="category-content">
+                                            <h3 class="category-title">Scents</h3>
+                                            <p class="category-description">Luxury fragrances and essential oils</p>
+                                            <a href="/shop" class="category-btn">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Swiper JS -->
                 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
