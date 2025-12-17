@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- CUSTOM CODE PAGES (Non-editable, built with code) -->
+    <!-- Homepage with Slider - See home.xml -->
+
+    <!-- BUILDER-EDITABLE PAGES (Can use visual website builder) -->
+    
+    <!-- About Page - Editable with website builder -->
+    <record id="about_page" model="ir.ui.view">
+        <field name="name">About Karobwa Scents</field>
+        <field name="type">qweb</field>
+        <field name="key">karobwa_website.about_page</field>
+        <field name="arch" type="xml">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <section class="pt-5 pb-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="mb-4 text-center">About Karobwa Scents</h1>
+                                <p class="lead text-center">Your journey to exquisite fragrances</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="pt-5 pb-5 oe_structure">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2>Our Story</h2>
+                                <p>Karobwa Scents was born from a passion for creating unique, memorable fragrances that capture life's precious moments.</p>
+                                <p>We believe that scent has the power to evoke emotions, create memories, and transform spaces. Each of our products is carefully crafted to bring you the finest fragrance experience.</p>
+                                <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+        </field>
+    </record>
+
+    <!-- Shop Page Template - Ready for website builder drag & drop -->
+    <record id="shop_page" model="ir.ui.view">
+        <field name="name">Shop Karobwa Products</field>
+        <field name="type">qweb</field>
+        <field name="key">karobwa_website.shop_page</field>
+        <field name="arch" type="xml">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <section class="pt-5 pb-5 bg-primary text-white text-center">
+                    <div class="container">
+                        <h1 class="display-4">Shop Karobwa Scents</h1>
+                        <p class="lead">Discover our collection of luxury fragrances</p>
+                    </div>
+                </section>
+                
+                <!-- Website builder content goes here -->
+                <section class="pt-5 pb-5 oe_structure">
+                    <div class="container">
+                        <div class="row">
+                            <p class="text-center text-muted">Products will be displayed here using Odoo's e-commerce module.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+        </field>
+    </record>
+
+    <!-- Products Catalog Page - Professional Product Listing -->
+    <record id="products_page" model="ir.ui.view">
+        <field name="name">Products Catalog</field>
+        <field name="type">qweb</field>
+        <field name="key">karobwa_website.products_page</field>
+        <field name="arch" type="xml">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!-- Page Header -->
+                <section class="products-header bg-dark text-white py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h1 class="display-4 mb-3">Our Collection</h1>
+                                <p class="lead">Discover our premium selection of luxury fragrances and scents</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Products Grid Section -->
+                <section class="products-section py-5">
+                    <div class="container">
+                        <!-- Products Grid -->
+                        <div class="products-container">
+                            <t t-if="products">
+                                <div class="row g-4">
+                                    <t t-foreach="products" t-as="product">
+                                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                            <div class="product-card h-100">
+                                                <!-- Product Image Container -->
+                                                <div class="product-image-container">
+                                                    <t t-if="product.image_1920">
+                                                        <img t-attrib-src="'/web/image/product.product/{}/image_1920'.format(product.id)" alt="product.name" class="product-image" />
+                                                    </t>
+                                                    <t t-else="">
+                                                        <div class="product-image-placeholder">
+                                                            <i class="fa fa-image"></i>
+                                                        </div>
+                                                    </t>
+                                                </div>
+
+                                                <!-- Product Info -->
+                                                <div class="product-info">
+                                                    <!-- Product Category Badge -->
+                                                    <t t-if="product.categ_id">
+                                                        <span class="product-category-badge"><t t-esc="product.categ_id.name" /></span>
+                                                    </t>
+
+                                                    <!-- Product Name -->
+                                                    <h3 class="product-name"><t t-esc="product.name" /></h3>
+
+                                                    <!-- Product Description -->
+                                                    <t t-if="product.description_sale">
+                                                        <p class="product-description"><t t-esc="product.description_sale[:100]" />...</p>
+                                                    </t>
+
+                                                    <!-- Product Price -->
+                                                    <div class="product-price-section">
+                                                        <span class="product-price">
+                                                            <t t-esc="product.list_price" t-options='{"widget": "monetary", "display_currency": product.currency_id}' />
+                                                        </span>
+                                                    </div>
+
+                                                    <!-- Product Rating (if available) -->
+                                                    <t t-if="product.rating_count">
+                                                        <div class="product-rating">
+                                                            <span class="rating-stars">
+                                                                <i class="fa fa-star"></i>
+                                                                <span class="rating-value"><t t-esc="'{:.1f}'.format(product.rating)" /></span>
+                                                                <span class="rating-count">(<t t-esc="product.rating_count" /> reviews)</span>
+                                                            </span>
+                                                        </div>
+                                                    </t>
+
+                                                    <!-- Add to Cart Button -->
+                                                    <button class="product-btn-add" data-product-id="product.id">
+                                                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <div class="alert alert-info text-center py-5">
+                                    <h4>No Products Available</h4>
+                                    <p>Please check back soon for our collection</p>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="products-cta bg-light py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto text-center">
+                                <h2>Premium Quality Guarantee</h2>
+                                <p class="lead">All our products are carefully crafted with the finest ingredients and premium quality standards.</p>
+                                <div class="row mt-4">
+                                    <div class="col-md-4">
+                                        <div class="cta-item">
+                                            <i class="fa fa-check-circle"></i>
+                                            <h5>100% Authentic</h5>
+                                            <p>Genuine premium fragrances</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="cta-item">
+                                            <i class="fa fa-truck"></i>
+                                            <h5>Fast Shipping</h5>
+                                            <p>Delivered to your door</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="cta-item">
+                                            <i class="fa fa-undo"></i>
+                                            <h5>Easy Returns</h5>
+                                            <p>30-day money back guarantee</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Karobwa Scents - Elegant Slider with Marquee -->
+
+    <template id="homepage" name="Karobwa Homepage">
+        <t t-call="website.layout">
+            <div id="wrap" class="container-fluid">
+                
+                <!-- Add Swiper CSS -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+                
+                <!-- Styles are loaded from static/src/css/style.css via assets registration -->
+
+                <!-- Banner Slider -->
+                <div class="tf-slideshow">
+                    <div class="swiper tf-swiper sw-slide-show">
+                        <div class="swiper-wrapper">
+                            
+                            <!-- Slide 1: Luxe Silk Mist -->
+                            <div class="swiper-slide">
+                                <div class="slider-wrap">
+                                    <div class="sld_image">
+                                        <img src="/karobwa_website/static/src/img/slider-14.jpg" alt="Luxe Silk Mist"/>
+                                    </div>
+                                    <div class="sld_content">
+                                        <div class="content-sld_wrap">
+                                            <p class="subtitle">Classic</p>
+                                            <h2 class="title_sld">
+                                                <a href="/shop">Luxe Silk Mist</a>
+                                            </h2>
+                                            <p class="description">Experience the ultimate luxury with our premium silk-infused fragrance mist</p>
+                                            <div>
+                                                <a href="/shop" class="tf-btn-link">
+                                                    Shop now
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Fresh Bloom Skin -->
+                            <div class="swiper-slide">
+                                <div class="slider-wrap">
+                                    <div class="sld_image">
+                                        <img src="/karobwa_website/static/src/img/slider-15.jpg" alt="Fresh Bloom Skin"/>
+                                    </div>
+                                    <div class="sld_content">
+                                        <div class="content-sld_wrap">
+                                            <p class="subtitle">Elegance</p>
+                                            <h2 class="title_sld">
+                                                <a href="/shop">Fresh Bloom Skin</a>
+                                            </h2>
+                                            <p class="description">Revitalize your skin with our fresh botanical essence collection</p>
+                                            <div>
+                                                <a href="/shop" class="tf-btn-link">
+                                                    Shop now
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Pure Glow Skin -->
+                            <div class="swiper-slide">
+                                <div class="slider-wrap">
+                                    <div class="sld_image">
+                                        <img src="/karobwa_website/static/src/img/slider-13.jpg" alt="Pure Glow Skin"/>
+                                    </div>
+                                    <div class="sld_content">
+                                        <div class="content-sld_wrap">
+                                            <p class="subtitle">Premium</p>
+                                            <h2 class="title_sld">
+                                                <a href="/shop">Pure Glow Skin</a>
+                                            </h2>
+                                            <p class="description">Unlock your natural radiance with our organic body care collection</p>
+                                            <div>
+                                                <a href="/shop" class="tf-btn-link">
+                                                    Shop now
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: Velvet Glow Luxe -->
+                            <div class="swiper-slide">
+                                <div class="slider-wrap">
+                                    <div class="sld_image">
+                                        <img src="/karobwa_website/static/src/img/slider-14.jpg" alt="Velvet Glow Luxe"/>
+                                    </div>
+                                    <div class="sld_content">
+                                        <div class="content-sld_wrap">
+                                            <p class="subtitle">Luxury</p>
+                                            <h2 class="title_sld">
+                                                <a href="/shop">Velvet Glow Luxe</a>
+                                            </h2>
+                                            <p class="description">Indulge in the softest touch with our velvet-smooth skincare line</p>
+                                            <div>
+                                                <a href="/shop" class="tf-btn-link">
+                                                    Shop now
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Pagination Dots -->
+                        <div class="sw-dot-default swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- Scrolling Marquee Text -->
+                <div class="marquee-section">
+                    <div class="marquee-wrapper">
+                        <div class="marquee-content">
+                            <h3 class="marquee-text">Karobwa Scents</h3>
+                            <h3 class="marquee-text outline">Luxury Fragrance</h3>
+                            <h3 class="marquee-text">Premium Perfumes</h3>
+                            <h3 class="marquee-text outline">Essential Oils</h3>
+                            <h3 class="marquee-text">Body Mist</h3>
+                            <h3 class="marquee-text outline">Scented Candles</h3>
+                            <h3 class="marquee-text">Aromatherapy</h3>
+                            <h3 class="marquee-text outline">Natural Beauty</h3>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <h3 class="marquee-text">Karobwa Scents</h3>
+                            <h3 class="marquee-text outline">Luxury Fragrance</h3>
+                            <h3 class="marquee-text">Premium Perfumes</h3>
+                            <h3 class="marquee-text outline">Essential Oils</h3>
+                            <h3 class="marquee-text">Body Mist</h3>
+                            <h3 class="marquee-text outline">Scented Candles</h3>
+                            <h3 class="marquee-text">Aromatherapy</h3>
+                            <h3 class="marquee-text outline">Natural Beauty</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                <script>
+                    (function() {
+                        'use strict';
+                        
+                        function initializeSlider() {
+                            if (typeof Swiper === 'undefined') {
+                                setTimeout(initializeSlider, 100);
+                                return;
+                            }
+                            
+                            var swiperEl = document.querySelector('.sw-slide-show');
+                            if (!swiperEl || swiperEl.swiper) return;
+                            
+                            new Swiper(swiperEl, {
+                                loop: true,
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                },
+                                speed: 1200,
+                                effect: 'fade',
+                                fadeEffect: {
+                                    crossFade: true
+                                },
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                },
+                                on: {
+                                    init: function() {
+                                        console.log('Elegant slider initialized');
+                                    }
+                                }
+                            });
+                        }
+                        
+                        if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', initializeSlider);
+                        } else {
+                            initializeSlider();
+                        }
+                    })();
+                </script>
+            </div>
+        </t>
+    </template>
+
+</odoo>
